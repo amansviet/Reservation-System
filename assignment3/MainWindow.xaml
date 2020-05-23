@@ -1,0 +1,83 @@
+﻿<Window x:Name="mainWindow" x:Class="assignment3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:assignment3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="560" Width="800">
+
+    <Grid>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="mnuAdvanceOptions" Header="_Advance Options" BorderBrush="#FF0C0B0B" Height="30" Width="125">
+                <MenuItem x:Name="mnuSave" Header="_Save Reservations" Click="MnuSave_Click" />
+                <Separator />
+                <MenuItem x:Name="mnuLoad" Header="_Load Reservations" Click="MnuLoad_Click" />
+            </MenuItem>
+        </Menu>
+        <Label x:Name="lblResult" Background="LightGray" Content="Result" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="66"/>
+        <TextBlock x:Name="tbSystemInfo" HorizontalAlignment="Left" Margin="367,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="107" Width="415" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" IsEnabled="False" FontWeight="Bold"><Run Text="Instructions:"/><LineBreak/><Run/><Run FontWeight="Normal"/><LineBreak/><Run FontWeight="Normal" Text="•To reserve a seat, enter a Customer Name and select a seat number&#xA;•To remove a reservation, either enter customer name or select a seat number. "/><Run Text="&#xA;"/></TextBlock>
+        <Label x:Name="lblCustomerName" Content="Customer Name :" HorizontalAlignment="Left" Margin="8,58,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnReserveSeat" Content="Reserve Seat" HorizontalAlignment="Left" Margin="146,156,0,0" VerticalAlignment="Top" Width="93" Height="27" Click="BtnReserveSeat_Click"/>
+        <TextBox x:Name="tbCustomerName" HorizontalAlignment="Left" Height="23" Margin="117,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"/>
+        <Button x:Name="btnRemove" Content="Remove Reservation" HorizontalAlignment="Left" Margin="20,156,0,0" VerticalAlignment="Top" Width="112" Height="27" Click="BtnRemove_Click"/>
+        <Button x:Name="btnSeatA" HorizontalAlignment="Left" Margin="388,72,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatB" HorizontalAlignment="Left" Margin="485,72,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatC" HorizontalAlignment="Left" Margin="582,72,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatD" HorizontalAlignment="Left" Margin="682,72,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatE" HorizontalAlignment="Left" Margin="388,130,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatF" HorizontalAlignment="Left" Margin="485,130,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatG" HorizontalAlignment="Left" Margin="582,130,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatH" HorizontalAlignment="Left" Margin="681,130,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatI" HorizontalAlignment="Left" Margin="388,186,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatJ" HorizontalAlignment="Left" Margin="485,186,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatK" HorizontalAlignment="Left" Margin="582,186,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatL" HorizontalAlignment="Left" Margin="681,186,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatM" HorizontalAlignment="Left" Margin="388,242,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatN" HorizontalAlignment="Left" Margin="485,242,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatO" HorizontalAlignment="Left" Margin="582,242,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatP" HorizontalAlignment="Left" Margin="682,242,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatQ" HorizontalAlignment="Left" Margin="388,298,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatR" HorizontalAlignment="Left" Margin="485,298,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatS" HorizontalAlignment="Left" Margin="582,298,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Button x:Name="btnSeatT" HorizontalAlignment="Left" Margin="681,298,0,0" VerticalAlignment="Top" Width="74" Height="25"/>
+        <Label x:Name="lblSeatNumber" Content="Seat Number :" HorizontalAlignment="Left" Margin="8,106,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbSeatNumber" HorizontalAlignment="Left" Margin="117,106,0,0" VerticalAlignment="Top" Width="163">
+            <ComboBoxItem Content="Seat A"/>
+            <ComboBoxItem Content="Seat B"/>
+            <ComboBoxItem Content="Seat C"/>
+            <ComboBoxItem Content="Seat D"/>
+            <ComboBoxItem Content="Seat E"/>
+            <ComboBoxItem Content="Seat F"/>
+            <ComboBoxItem Content="Seat G"/>
+            <ComboBoxItem Content="Seat H"/>
+            <ComboBoxItem Content="Seat I"/>
+            <ComboBoxItem Content="Seat J"/>
+            <ComboBoxItem Content="Seat K"/>
+            <ComboBoxItem Content="Seat L"/>
+            <ComboBoxItem Content="Seat M"/>
+            <ComboBoxItem Content="Seat N"/>
+            <ComboBoxItem Content="Seat O"/>
+            <ComboBoxItem Content="Seat P"/>
+            <ComboBoxItem Content="Seat Q"/>
+            <ComboBoxItem Content="Seat R"/>
+            <ComboBoxItem Content="Seat S"/>
+            <ComboBoxItem Content="Seat T"/>
+        </ComboBox>
+        <Label x:Name="lblTitle" Content="Seat Reservation System" HorizontalAlignment="Left" Margin="452,10,0,0" VerticalAlignment="Top" Width="259" FontSize="22" Height="40"/>
+        <Rectangle x:Name="rctSeatReserved" HorizontalAlignment="Left" Height="10" Margin="532,427,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" Fill="#FFFFB6C1"/>
+        <Label x:Name="lblSeatReserved" Content="Seat Reserved" HorizontalAlignment="Left" Margin="554,417,0,0" VerticalAlignment="Top"/>
+        <Rectangle x:Name="rctSeatAvailable" HorizontalAlignment="Left" Height="10" Margin="654,427,0,0" Stroke="Black" VerticalAlignment="Top" Width="18" Fill="#FF90EE90"/>
+        <Label x:Name="lblSeatAvailable" Content="Seat Available" HorizontalAlignment="Left" Margin="676,417,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnClearAllSeats" Content="Clear All Seats" HorizontalAlignment="Left" Margin="253,156,0,0" VerticalAlignment="Top" Width="83" Click="BtnClearAllSeats_Click" Height="27" Background="Red"/>
+        <ComboBox x:Name="cbLinqQuery" HorizontalAlignment="Left" Margin="210,212,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="CbLinqQueries_SelectionChanged">
+            <ComboBoxItem Content="Select a LINQ query" IsSelected="True" Visibility="Collapsed"/>
+            <ComboBoxItem Content="LINQ#1"/>
+            <ComboBoxItem Content="LINQ#2"/>
+            <ComboBoxItem Content="LINQ#3"/>
+        </ComboBox>
+        <ScrollViewer x:Name="svNotifications" HorizontalAlignment="Left" Height="211" Margin="10,241,0,0" VerticalAlignment="Top" Width="338" VerticalScrollBarVisibility="Auto" Background="White">
+            <TextBlock x:Name="tbNotifications" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Text="{Binding SeatName}"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
